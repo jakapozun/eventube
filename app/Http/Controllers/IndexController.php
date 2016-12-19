@@ -21,4 +21,9 @@ class IndexController extends Controller
     	$users = User::all();
     	return view('index', array('user' => Auth::user()), compact('events','categories','users'));
     }
+
+    public function show_contact()
+    {
+    	return view('contact', array('user' => Auth::user());
+    }
 }
