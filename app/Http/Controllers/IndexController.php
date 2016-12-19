@@ -24,6 +24,6 @@ class IndexController extends Controller
 
     public function show_contact()
     {
-    	return view('contact', array('user' => Auth::user());
+    	return view('contact', array('user' => Auth::user()));
     }
 }

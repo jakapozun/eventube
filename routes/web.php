@@ -27,8 +27,8 @@ Route::post('/insert_event', 'EventController@insert_event');
 
 
 
+Route::get('/contact', 'IndexController@show_contact');
 
 
 
-
-Route::get('/event_details', 'EventController@details')
+Route::get('/event_details', 'EventController@details');
