@@ -11,6 +11,7 @@ MAIN CONTENT
       	<h3><i class="fa fa-angle-right"></i> Add Event</h3>
       	<hr>
 
+
       	<div class="container">
             <form role="form" method="POST" action="{{ url('/insert_event') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
