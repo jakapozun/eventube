@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/', 'IndexController@show_index');
 
-Route::get('/contact', 'IndexController@show_contact');
+Route::get('/home', 'HomeController@index');
 
 Route::get('/profile', 'ProfileController@show_profile');
 

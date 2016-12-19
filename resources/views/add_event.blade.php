@@ -11,9 +11,8 @@ MAIN CONTENT
       	<h3><i class="fa fa-angle-right"></i> Add Event</h3>
       	<hr>
 
-
       	<div class="container">
-            <form role="form" method="POST" action="{{ url('/insert_event') }}" enctype="multipart/form-data">
+            <form role="form" method="POST" enctype="multipart/form-data" action="{{ url('/insert_event') }}">
                 {{ csrf_field() }}
 				<h4>Name of Event:</h4>
 				<input type="text" name="name" />
@@ -25,7 +24,7 @@ MAIN CONTENT
 				<input type="text" name="description" />
 				<br>
 				<h4>Date/Time:</h4>
-				<input type="date" name="datetime">
+				<input type="datetime-local" name="datetime">
 				<br>
 				<h4>City:</h4>
 				<input type="text" name="city" />

@@ -60,7 +60,7 @@
                   $user_id = Auth::user()->id;
                   Session::put('user_id', $user_id);
                 ?>
-                <li><a href="/add_event" class="logout">Add an Event</a></li> 
+                  <li><a href="/add_event" class="logout">Add an Event</a></li>
                   <li><a href="{{ url('/logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();" class="logout">
@@ -106,7 +106,7 @@
                   </li>
 
                   <li class="sub">
-                      <a href="" >
+                      <a href="javascript:;" >
                           <i class="fa fa-comments-o"></i>
                           <span>Forum</span>
                       </a>
@@ -114,7 +114,7 @@
                   </li>
 
                   <li class="sub">
-                      <a href="" >
+                      <a href="javascript:;" >
                           <i class="fa fa-info-circle"></i>
                           <span>About</span>
                       </a>
@@ -122,7 +122,7 @@
                   </li>
 
                   <li class="sub">
-                      <a href="/contact" >
+                      <a href="javascript:;" >
                           <i class="fa fa-phone-square"></i>
                           <span>Contact</span>
                       </a>
@@ -138,6 +138,17 @@
       <!--sidebar end-->
       
       @yield('content')
+
+      <!--footer start-->
+      <!--<footer class="site-footer">
+          <div class="text-center">
+              © 2016 EVENTube
+              <a href="blank.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->-->
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
