@@ -24,3 +24,11 @@ Route::post('/profile', 'ProfileController@add_avatar');
 Route::get('/add_event', 'EventController@show_add_event');
 
 Route::post('/insert_event', 'EventController@insert_event');
+
+
+
+
+
+
+
+Route::get('/event_details', 'EventController@details')

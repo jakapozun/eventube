@@ -67,4 +67,10 @@ class EventController extends Controller
 
 	   return redirect('/');
     }
+
+    public function details ()
+    
+    {
+    	
+    }
 }
