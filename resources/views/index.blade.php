@@ -23,7 +23,7 @@
 							                    <div class="project">
 							                        <div class="photo-wrapper">
 							                            <div class="photo">
-							                            	<a class="fancybox" href="/event_details/{{$event->id}}"><img class="img-responsive" src="{{$event->image}}" alt="" style="max-height:200px"></a><br>Event Name: {{$event->name}}<br>Description: {{$event->description}}<br>Event starts at: {{$event->time}}<br>City: {{$event->city}}<br>Country: {{$event->country}}<br>Price: {{$event->price}}€
+							                            	<a class="fancybox" href="#"><img class="img-responsive" src="{{$event->image}}" alt="" style="max-height:200px"></a><br>Event Name: {{$event->name}}<br>Description: {{$event->description}}<br>Event starts at: {{$event->time}}<br>City: {{$event->city}}<br>Country: {{$event->country}}<br>Price: {{$event->price}}€
 							                            </div>						                            
 						                        	</div>
 						                    	</div>

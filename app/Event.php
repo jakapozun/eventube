@@ -15,9 +15,4 @@ class Event extends Model
     {
         return $this->belongsTo('App\User');     
     }
-    
-    public function Comments()
-    {
-    	return $this->hasMany('App\Comment');	
-    }
 }
