@@ -9,15 +9,15 @@
     <title>EVENTube</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/jquery.js"></script>
+    <script src="/assets/js/jquery.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -87,7 +87,7 @@
               <ul class="sidebar-menu" id="nav-accordion">                 
               	  @if (Auth::check())
                     @if(isset($user->avatar))
-                      <p class="centered"><a href="/profile"><img src="avatars/{{ $user->avatar }}" class="img-circle" width="60"></a></p>
+                      <p class="centered"><a href="/profile"><img src="/avatars/{{ $user->avatar }}" class="img-circle" width="60"></a></p>
                     @else
                       <h5 class="centered"><a href="/profile">View your profile</a></h5>
                     @endif
@@ -100,7 +100,7 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="/">All Events</a></li>
-                          <li><a  href="#">My Events</a></li>
+                          <li><a  href="/my_events">My Events</a></li>
                           <li><a  href="#">Favorites</a></li>
                       </ul>
                   </li>
@@ -114,7 +114,7 @@
                   </li>
 
                   <li class="sub">
-                      <a href="" >
+                      <a href="/about" >
                           <i class="fa fa-info-circle"></i>
                           <span>About</span>
                       </a>

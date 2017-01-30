@@ -12,6 +12,8 @@ use App\User;
 
 use App\Event;
 
+use App\Comment;
+
 use Auth;
 
 use Session;
@@ -68,9 +70,41 @@ class EventController extends Controller
 	   return redirect('/');
     }
 
-    public function details ()
-    
+    public function details($id)   
     {
-    	
+    	$events = Event::where('id', $id)->first();
+      $comments = Comment::where('event_id', '=', $id)->get();
+      $users = User::where('')
+    	return view('event_details', array('user' => Auth::user()), compact('events', 'comments'));
+    }
+
+    public function show_my_events()
+    {
+    	$user_id = Session::get('user_id');
+    	$events = Event::where('user_id', $user_id)->get();  
+    	return view('my_events', array('user' => Auth::user()), compact('events'));
+    }
+
+    public function add_going($id)
+    {
+      $user_id = Session::get('user_id');
+      $events = Event::where('user_id', $user_id)->get();  
+      
+    }
+
+    public function add_interested($id)
+    {
+      
+    }
+
+    public function add_comment(request $request)
+    {
+      $user_id = Session::get('user_id');
+      $comment = new Comment();
+      $comment->user_id = $user_id;
+      $comment->text = $request->input('text');
+      $comment->event_id = $request->input('event_id');
+      $comment->save();
+      return redirect()->back();
     }
 }
